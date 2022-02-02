@@ -1,9 +1,10 @@
 const express = require("express");
+const { json } = require("express/lib/response");
 const http = require("http");
 
 const PORT = process.env.PORT || 5000;
 
-app=express();
+app = express();
 const server = http.createServer(app)
 server.listen(PORT, function () {
     console.log("Server in ascolto sulla porta " + PORT);
@@ -26,7 +27,7 @@ app.use("/", express.static('./static'));
 
 // routes di lettura dei parametri post
 
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json()) // To parse the incoming requests with JSON payloads
 
 // 6 - log dei parametri 
@@ -40,9 +41,21 @@ app.use("/", function (req, res, next) {
 
 /* --- REQUEST --- */
 
-//
-//
-//
+app.get('/api/testGet', (req, res, next) => {
+    class jsonT{
+        Nome;
+        Cognome;
+        Eta;
+
+        constructor(nome,cognome,eta){
+            this.Nome = nome;
+            this.Cognome = cognome;
+            this.Eta = eta
+        }
+    }
+    let jsonTest = new jsonT("nome","test",generaNumero(10,90))
+    res.json(jsonTest);
+});
 
 /* **********************  DEFAULT ROUTE  ************************* */
 
@@ -60,3 +73,8 @@ app.use(function (err, req, res, next) {
     console.log(err.stack);  // stack completo  
 });
 
+
+function generaNumero(a, b) {
+    //estremi inlcusi
+    return Math.floor((b - a + 1) * Math.random()) + a;
+}

@@ -4,7 +4,7 @@ $(function(){
         url: DOMAIN + '/api/testGet',
         dataType: "json",
         success: function(data){
-            console.log(data)
+            document.getElementById("wrapper").innerHTML += JSON.stringify(data)
         },
         error: function(msg){
             console.log(msg) 

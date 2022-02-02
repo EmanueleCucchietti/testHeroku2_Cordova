@@ -1,0 +1,23 @@
+{
+  "name": "testheroku2_cordova",
+  "version": "1.0.0",
+  "description": "TestHeroku2 - MasterProject",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmanueleCucchietti/testHeroku2_Cordova.git"
+  },
+  "author": "EmanuleCucchietti",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/EmanueleCucchietti/testHeroku2_Cordova/issues"
+  },
+  "homepage": "https://github.com/EmanueleCucchietti/testHeroku2_Cordova#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "http": "^0.0.1-security"
+  }
+}

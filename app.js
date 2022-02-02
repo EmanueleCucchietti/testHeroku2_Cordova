@@ -53,7 +53,7 @@ app.get('/api/testGet', (req, res, next) => {
             this.Eta = eta
         }
     }
-    let jsonTest = new jsonT("nome","test",generaNumero(10,90))
+    let jsonTest = new jsonT("nome"+generaNumero(0,10),"test",generaNumero(10,90))
     res.json(jsonTest);
 });
 

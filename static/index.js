@@ -1,6 +1,4 @@
 $(function(){
-    alert("worka");
-
     $.ajax({
         type: "GET",
         url: '/api/testGet',

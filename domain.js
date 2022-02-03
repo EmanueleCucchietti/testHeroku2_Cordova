@@ -1,1 +1,0 @@
-const DOMAIN = "http://emacuch-test2.herokuapp.com";

@@ -14,6 +14,7 @@ Working both for http/https thanks to heroku
 
 
 Testing Get
+
 Return a testing object with 3 paramethers (name,surname,age) with random name and age
 ```
 https://emacuch-test1.herokuapp.com/api/testGet
